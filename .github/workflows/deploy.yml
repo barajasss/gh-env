@@ -31,12 +31,12 @@ jobs:
         run: npm test
       - name: Output information
         run: |
-          echo "Mongodb username from github: ${{ emv.MONGODB_USERNAME }}"
+          echo "Mongodb username from github: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |
-          echo "Mongodb username from github: ${{ emv.MONGODB_USERNAME }}"
-          echo "Mongodb db name: ${{ emv.MONGODB_DB_NAME }}"
+          echo "Mongodb username from github: ${{ env.MONGODB_USERNAME }}"
+          echo "Mongodb db name: ${{ env.MONGODB_DB_NAME }}"
